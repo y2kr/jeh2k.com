@@ -24,13 +24,15 @@ const asset = (path: string) => `${base}${path}`;
   <article class="case-study narrow">
     <h1>{project.data.title}</h1>
 
-    <div class="gallery">
-      {project.data.images.map((image, index) => (
-        <button type="button" data-gallery-image data-full={asset(image.src)} aria-label={`Open image ${index + 1}: ${image.alt}`}>
-          <img src={asset(image.src)} alt={image.alt} loading={index > 1 ? 'lazy' : 'eager'} />
-        </button>
-      ))}
-    </div>
+    {project.data.images.length > 0 && (
+      <div class="gallery">
+        {project.data.images.map((image, index) => (
+          <button type="button" data-gallery-image data-full={asset(image.src)} aria-label={`Open image ${index + 1}: ${image.alt}`}>
+            <img src={asset(image.src)} alt={image.alt} loading={index > 1 ? 'lazy' : 'eager'} />
+          </button>
+        ))}
+      </div>
+    )}
 
     <div class="prose"><Content /></div>
 

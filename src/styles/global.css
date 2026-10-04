@@ -204,12 +204,61 @@ h2 {
   transform: scale(1.015);
 }
 
+.demo-image {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  padding: 0;
+  border: 1px solid var(--foreground);
+  background: #090909;
+}
+
+.demo-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .prose {
   width: 100%;
 }
 
 .prose p {
   margin: 0 0 1.25rem;
+}
+
+.chopin-goat {
+  margin: 2rem 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--foreground);
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.chopin-goat p {
+  margin-bottom: 0.25rem;
+}
+
+.chopin-goat footer {
+  font-size: 0.85em;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.prose th,
+.prose td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose th {
+  text-align: left;
+  border-bottom-color: var(--foreground);
 }
 
 .project-links {
