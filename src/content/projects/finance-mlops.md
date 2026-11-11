@@ -14,6 +14,14 @@ Dagster orchestrates news ingestion, weak labeling and TF-IDF training. MLflow t
 
 The stack runs through Docker Compose, with Postgres for data storage and Prometheus and Grafana for metrics.
 
+## Pipeline architecture
+
+<button class="demo-image" style="max-width: none; margin-block: 2rem" type="button" data-gallery-image data-full="/files/imgs/finance-mlops/architecture.svg" aria-label="Open Finance MLOps pipeline diagram">
+  <img src="/files/imgs/finance-mlops/architecture.svg" alt="Dagster orchestrates RSS ingestion into Postgres, Ollama weak labelling, TF-IDF training and monitoring. DVC PhraseBank also feeds training. Models pass a frozen gold gate into MLflow Registry and BentoML; predictions return to Postgres. Evidently and NannyML feed Prometheus and Grafana, and trigger retraining after two breaches." loading="lazy" />
+</button>
+
+From the [repository README](https://github.com/y2kr/finance-mlops#readme). Select the diagram to enlarge it, or [open the full-size SVG](/files/imgs/finance-mlops/architecture.svg) to zoom in. [Mermaid source](/files/imgs/finance-mlops/architecture.mmd).
+
 <!-- ## What I learned
 
 yeah -->

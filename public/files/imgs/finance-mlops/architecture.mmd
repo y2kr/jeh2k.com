@@ -1,0 +1,17 @@
+flowchart LR
+    RSS[Google News RSS] --> PG[(Postgres)]
+    Ollama[Host Ollama] --> Labels[Weak labels]
+    PG --> Labels --> PG
+    PhraseBank[DVC PhraseBank] --> Train[TF-IDF training]
+    PG --> Train --> Gate[Frozen gold gate]
+    Gate --> Registry[MLflow Registry]
+    Registry --> API[BentoML API]
+    API --> PG
+    PG --> Monitor[Evidently + NannyML]
+    Monitor --> Prom[Prometheus]
+    Prom --> Grafana[Grafana]
+    Monitor -->|two breaches| Train
+    Dagster[Dagster] --> RSS
+    Dagster --> Labels
+    Dagster --> Train
+    Dagster --> Monitor
