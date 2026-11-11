@@ -1,5 +1,5 @@
 ---
-title: Finance MLOps <2026 WIP>
+title: Finance MLOps <2026>
 summary: A local, end-to-end MLOps pipeline for financial-news sentiment, from ingestion and training to serving, monitoring and retraining.
 date: 2026-09-23
 images: []
@@ -14,6 +14,6 @@ Dagster orchestrates news ingestion, weak labeling and TF-IDF training. MLflow t
 
 The stack runs through Docker Compose, with Postgres for data storage and Prometheus and Grafana for metrics.
 
-## What I learned
+<!-- ## What I learned
 
-yeah
+yeah -->
